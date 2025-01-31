@@ -1,8 +1,10 @@
+/*Centrerar texten samt setter en almän fontfamly*/
 body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
-
+/*Endrar textstoleken om stoleken på skärmen är mindre en 600px samt bilderna som är påverkade av 
+content-container flyttas till sidan och stoleken tar 80% width */
 @media (max-width: 600px) {
     h1{
         font-size: 24px;
@@ -23,10 +25,8 @@ body {
     .content-container img {
         max-width: 80%; 
     }
-    button {
-
-    }
   }
+  /*Endrar stoleken på de olika texterna om skermens stolik är mindre en 300px samt tar bort bilderna som påverkas av content-container */
 @media (max-width:300px){
     h1{
         font-size: 18px;
@@ -41,22 +41,24 @@ body {
         display: none;
     }
 }
-
+/*En container för inneholl, anvender flexbox för att plasera objekt hjämte varander
+aline itemt för att centrera dem vertikalt.*/
 .content-container {
     display: flex;
     align-items: center; 
     justify-content: space-between;
 }
-
+/*gjör att texten tar så mycket plats som möjligt.*/
 .text-content {
     flex: 1; 
 }
-
+/*Bild instelningarna inom content-container. begränsar dess stolek och bibeholler sina proportioner samt mjuk övergong.*/
 .content-container img {
     max-width: 40%;
     height: auto;
     transition: opacity 0.3s ease-in-out;
 }
+/*Allmän still för en knapp*/
 button {
     display: block;
     margin: 10px auto;
@@ -68,7 +70,7 @@ button {
     border: none;
     border-radius: 3%;
 }
-
+/*Spesifik stil för knapp*/
 .change-bg-btn {
     padding: 5%;
     font-size: 2vw;
